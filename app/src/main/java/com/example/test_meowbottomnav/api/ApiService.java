@@ -26,4 +26,27 @@ public interface ApiService {
 
     @GET("hello")
     Call<Customers> getUserfromApi();
+
+    /*
+    private void clickGetApi() {
+        //ApiService.apiService.getUserfromApi();
+        Call<User> call = apiService.getUserfromApi();
+        call.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                Toast.makeText(MainActivity.this, "call api success", Toast.LENGTH_SHORT).show();
+                User user = response.body();
+                if (user != null) {
+                    textViewID.setText(String.valueOf(user.getId()));
+                    textViewName.setText(user.getName());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+                Toast.makeText(MainActivity.this, "call api F", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+     */
 }
